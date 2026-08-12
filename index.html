@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título y descripción básica para Google -->
+    <title>Carlitos y Kasty - Todo el Rato Tour</title>
+    <meta name="description" content="Fechas y entradas para la gira extendida de Carlos Pérez B2B K-Style. Todo el rato.">
+
+    <!-- Favicon (El icono de la pestaña del navegador) -->
+    <link rel="icon" type="image/png" href="img/favicon_CPXKS.png">
+
+    <!-- Open Graph: Meta tags para WhatsApp, Facebook, LinkedIn, etc. -->
+    <meta property="og:title" content="Carlitos y Kasty - Todo el Rato">
+    <meta property="og:description" content="Descubre las próximas fechas y consigue tus entradas para la gira de Carlos Pérez y K-Style.">
+    <!-- IMPORTANTE: La URL de la imagen debe ser absoluta (empezar por http) una vez lo subas -->
+    <meta property="og:image" content="https://www.tudominio.com/img/imagen-compartir.jpg">
+    <meta property="og:url" content="https://www.tudominio.com">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Capa independiente para el fondo Parallax fluido -->
+    <div id="fondo-animado"></div>
+
+    <header class="header">
+        <img src="img/logo_CarlitosYKasty_vertical_blanco.png" alt="Logo" class="logo">
+    </header>
+
+    <!-- Contenedor donde se cargarán los conciertos automáticamente -->
+    <main class="events-container" id="contenedor-tarjetas"></main>
+
+    <footer class="footer">
+        <a href="https://www.instagram.com/carlosperezdj" class="social-link" target="_blank">
+            <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            CP
+        </a>
+        <a href="https://www.instagram.com/kstyledavid" class="social-link" target="_blank">
+            <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            KS
+        </a>
+    </footer>
+
+    <!-- Lógica de programación -->
+    <script src="main.js"></script>
+</body>
+</html>
