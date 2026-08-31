@@ -54,11 +54,11 @@ const LISTA_CONCIERTOS = [
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
-        anio: "2027",
-        dia: "09",
-        mes: "ene",
+        anio: "2026",
+        dia: "19",
+        mes: "dic",
         sala: "Crepúsculo Club",
-        lugar: "ALFARO, LA RIOJA",
+        lugar: "ENTRADAS DISPONIBLES SÓLO EN TAQUILLA / ALFARO, LA RIOJA",
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
