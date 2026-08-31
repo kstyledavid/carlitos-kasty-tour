@@ -45,20 +45,20 @@ const LISTA_CONCIERTOS = [
         lugar: "BILBAO",
         enlace: "https://www.obrerosdeltechno.com"
     },
+     {
+        anio: "2026",
+        dia: "19",
+        mes: "dic",
+        sala: "Crepúsculo Club",
+        lugar: "ENTRADAS DISPONIBLES SÓLO EN TAQUILLA / ALFARO, LA RIOJA",
+        enlace: "https://www.obrerosdeltechno.com"
+    },
     {
         anio: "2026",
         dia: "25",
         mes: "dic",
         sala: "RAVEOUT500",
         lugar: "SALA INDEPENDANCE, MADRID",
-        enlace: "https://www.obrerosdeltechno.com"
-    },
-    {
-        anio: "2026",
-        dia: "19",
-        mes: "dic",
-        sala: "Crepúsculo Club",
-        lugar: "ENTRADAS DISPONIBLES SÓLO EN TAQUILLA / ALFARO, LA RIOJA",
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
@@ -75,14 +75,6 @@ const LISTA_CONCIERTOS = [
         mes: "feb",
         sala: "Peligro Club",
         lugar: "SKY ROOM / PELÍCANO, A CORUÑA",
-        enlace: "https://www.obrerosdeltechno.com"
-    },
-    {
-        anio: "2027",
-        dia: "TBC",
-        mes: "tbc",
-        sala: "Del Revés",
-        lugar: "SALA TERMINAL, SABADELL",
         enlace: "https://www.obrerosdeltechno.com"
     }
 ];
