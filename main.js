@@ -11,7 +11,7 @@ const LISTA_CONCIERTOS = [
         mes: "oct",
         sala: "Sonica",
         lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://entradium.com/events/sonica-x-carlos-perez-y-k-style-todo-el-rato-tour"
     },
     {
         anio: "2026",
@@ -27,7 +27,7 @@ const LISTA_CONCIERTOS = [
         mes: "nov",
         sala: "Unity",
         lugar: "SALA ANDÉN 56, BURGOS",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://www.enterticket.es/eventos/unity-x-carlitos-y-kasty-todo-el-rato-cpxks-790888"
     },
     {
         anio: "2026",
@@ -43,7 +43,7 @@ const LISTA_CONCIERTOS = [
         mes: "dic",
         sala: "Sala Gold Fever",
         lugar: "BILBAO",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-923141"
     },
      {
         anio: "2026",
@@ -57,7 +57,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "25",
         mes: "dic",
-        sala: "RAVEOUT500",
+        sala: "RaveOut500",
         lugar: "SALA INDEPENDANCE, MADRID",
         enlace: "https://www.obrerosdeltechno.com"
     },
@@ -75,7 +75,7 @@ const LISTA_CONCIERTOS = [
         mes: "feb",
         sala: "Peligro Club",
         lugar: "SKY ROOM / PELÍCANO, A CORUÑA",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://www.fourvenues.com/peligro-club/3IQR"
     }
 ];
 
