@@ -34,7 +34,7 @@ const LISTA_CONCIERTOS = [
         dia: "28",
         mes: "nov",
         sala: "Sala Kaya",
-        lugar: "SANTANDER",
+        lugar: "ENTRADAS DISPONIBLES MUY PRONTO / SANTANDER",
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
