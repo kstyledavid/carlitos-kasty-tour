@@ -67,7 +67,7 @@ const LISTA_CONCIERTOS = [
         mes: "ene",
         sala: "247 Technoclub",
         lugar: "GURÚ DANCE CLUB, MURCIA",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://site.fourvenues.com/es/247-techno-club-null/events/carlitos-y-kasty-todo-el-rato-30-01-2027-QFSD"
     },
     {
         anio: "2027",
