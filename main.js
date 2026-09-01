@@ -19,7 +19,7 @@ const LISTA_CONCIERTOS = [
         mes: "oct",
         sala: "Jimmy Jazz",
         lugar: "VITORIA-GASTEIZ",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://sarrerak.jimmyjazzgasteiz.com/web/?menu=1162&pagina=entradas&item=62741&siteID=jimmyjazz"
     },
     {
         anio: "2026",
@@ -59,7 +59,7 @@ const LISTA_CONCIERTOS = [
         mes: "dic",
         sala: "RaveOut500",
         lugar: "SALA INDEPENDANCE, MADRID",
-        enlace: "https://www.obrerosdeltechno.com"
+        enlace: "https://www.fourvenues.com/RAVEOUT500/C2IR"
     },
     {
         anio: "2027",
