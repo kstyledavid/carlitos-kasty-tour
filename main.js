@@ -34,8 +34,8 @@ const LISTA_CONCIERTOS = [
         dia: "28",
         mes: "nov",
         sala: "Sala Kaya",
-        lugar: "ENTRADAS DISPONIBLES MUY PRONTO / SANTANDER",
-        enlace: "https://www.obrerosdeltechno.com"
+        lugar: "SANTANDER",
+        enlace: "https://www.salakaya.com/concierto-santander/k-style-y-carlos-perez-santander-noviembre-2026"
     },
     {
         anio: "2026",
