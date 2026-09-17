@@ -39,16 +39,38 @@
     <!-- Contenedor donde se cargarán los conciertos automáticamente -->
     <main class="events-container" id="contenedor-tarjetas"></main>
 
+    <!-- Contenedor de patrocinadores (Clubes) -->
+    <section class="sponsors-section" id="contenedor-patrocinadores"></section>
+
+    <!-- Footer con redes y enlaces legales -->
     <footer class="footer">
-        <a href="https://www.instagram.com/carlosperezdj" class="social-link" target="_blank">
-            <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            CP
-        </a>
-        <a href="https://www.instagram.com/kstyledavid" class="social-link" target="_blank">
-            <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-            KS
-        </a>
+        <div class="social-links-wrapper">
+            <a href="https://www.instagram.com/carlosperezdj" class="social-link" target="_blank">
+                <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                CP
+            </a>
+            <a href="https://www.instagram.com/kstyledavid" class="social-link" target="_blank">
+                <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                KS
+            </a>
+        </div>
+        <div class="legal-links">
+            <a href="privacidad.html" target="_blank">Política de Privacidad</a>
+            <a href="cookies.html" target="_blank">Política de Cookies</a>
+        </div>
     </footer>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies propias y de terceros (píxeles de seguimiento) para analizar el tráfico y personalizar los anuncios. Puedes aceptarlas todas o rechazarlas. <br>
+            <a href="privacidad.html" target="_blank">Política de Privacidad</a> | <a href="cookies.html" target="_blank">Política de Cookies</a></p>
+            <div class="cookie-buttons">
+                <button id="btn-rechazar" class="btn-cookie btn-rechazar">Rechazar</button>
+                <button id="btn-aceptar" class="btn-cookie btn-aceptar">Aceptar</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Lógica de programación -->
     <script src="main.js"></script>
