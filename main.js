@@ -1,6 +1,6 @@
 /************************************************************************
  *   PARA LOS CHICOS DEL GRUPO: 
- *   SOLO TENÉIS QUE EDITAR ESTA LISTA DE ABAJO PARA AÑADIR CONCIERTOS.
+ *   SOLO TENÉIS QUE EDITAR ESTAS LISTAS PARA AÑADIR CONCIERTOS O SPONSORS.
  *   Cuidado con las comas y las comillas.
  ************************************************************************/
 
@@ -79,66 +79,112 @@ const LISTA_CONCIERTOS = [
     }
 ];
 
+const PATROCINADORES = [
+    // Añade aquí abajo los nombres de los logos con el formato: "nombre-archivo.png",
+    
+];
+
 /************************************************************************
  *   NO TOCAR NADA DE AQUÍ ABAJO (Lógica del sistema)
  ************************************************************************/
 
+// --- 1. RENDERIZADO DE CONCIERTOS ---
 const contenedor = document.getElementById('contenedor-tarjetas');
 let anoActual = ""; 
 
-// Ordenamos la lista por año para evitar errores de escritura
 LISTA_CONCIERTOS.sort((a, b) => parseInt(a.anio) - parseInt(b.anio));
 
-LISTA_CONCIERTOS.forEach(concierto => {
-    
-    // Si el año de este concierto es distinto, metemos el separador visual
-    if (concierto.anio !== anoActual) {
-        contenedor.innerHTML += `<h2 class="separador-ano">${concierto.anio}</h2>`;
-        anoActual = concierto.anio;
-    }
+if (contenedor) {
+    LISTA_CONCIERTOS.forEach(concierto => {
+        if (concierto.anio !== anoActual) {
+            contenedor.innerHTML += `<h2 class="separador-ano">${concierto.anio}</h2>`;
+            anoActual = concierto.anio;
+        }
 
-    // Definimos la estructura visual (Plantilla)
-    const tarjetaHTML = `
-        <a href="${concierto.enlace}" target="_blank" class="event-card">
-            <div class="event-info">
-                <p class="event-date">${concierto.dia} <span>//${concierto.mes}</span></p>
-                <h2 class="event-name">${concierto.sala}</h2>
-                <p class="event-location">${concierto.lugar}</p>
-            </div>
-            <div class="ticket-icon-wrapper">
-                <svg viewBox="0 0 50 30" class="ticket-svg">
-                    <rect x="1" y="1" width="48" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
-                    <line x1="35" y1="1" x2="35" y2="29" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
-                    <path d="M10 20L20 10M20 10H14M20 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-        </a>
-    `;
-    
-    // Inyectamos la tarjeta en el contenedor
-    contenedor.innerHTML += tarjetaHTML;
-});
+        const tarjetaHTML = `
+            <a href="${concierto.enlace}" target="_blank" class="event-card">
+                <div class="event-info">
+                    <p class="event-date">${concierto.dia} <span>//${concierto.mes}</span></p>
+                    <h2 class="event-name">${concierto.sala}</h2>
+                    <p class="event-location">${concierto.lugar}</p>
+                </div>
+                <div class="ticket-icon-wrapper">
+                    <svg viewBox="0 0 50 30" class="ticket-svg">
+                        <rect x="1" y="1" width="48" height="28" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <line x1="35" y1="1" x2="35" y2="29" stroke="currentColor" stroke-width="2" stroke-dasharray="2 2"/>
+                        <path d="M10 20L20 10M20 10H14M20 10V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </a>
+        `;
+        contenedor.innerHTML += tarjetaHTML;
+    });
+}
 
+// --- 2. RENDERIZADO DE PATROCINADORES ---
+const contenedorSponsors = document.getElementById('contenedor-patrocinadores');
 
-/************************************************************************
- *   EFECTO PARALLAX EXACTO (SIN BORDES NEGROS)
- ************************************************************************/
+if (contenedorSponsors && PATROCINADORES.length > 0) {
+    PATROCINADORES.forEach(logo => {
+        const imgHTML = `<img src="img/clubs/${logo}" class="sponsor-logo" alt="Patrocinador">`;
+        contenedorSponsors.innerHTML += imgHTML;
+    });
+}
+
+// --- 3. EFECTO PARALLAX EXACTO ---
 const fondoAnimado = document.getElementById('fondo-animado');
 
-window.addEventListener('scroll', () => {
-    // 1. Píxeles que el usuario ha bajado
-    let scrollTop = window.scrollY;
+if (fondoAnimado) {
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.scrollY;
+        let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        
+        if (maxScroll <= 0) return; 
+        
+        let porcentaje = scrollTop / maxScroll;
+        fondoAnimado.style.transform = `translateY(-${porcentaje * 20}vh)`;
+    });
+}
+
+// --- 4. GESTIÓN DE COOKIES Y PÍXEL ---
+const cookieBanner = document.getElementById('cookie-banner');
+const btnAceptar = document.getElementById('btn-aceptar');
+const btnRechazar = document.getElementById('btn-rechazar');
+
+const estadoCookies = localStorage.getItem('cookiesAceptadas');
+
+if (!estadoCookies && cookieBanner) {
+    cookieBanner.style.display = 'flex';
+} else if (estadoCookies === 'true') {
+    iniciarPixel();
+}
+
+if (btnAceptar) {
+    btnAceptar.addEventListener('click', () => {
+        localStorage.setItem('cookiesAceptadas', 'true');
+        cookieBanner.style.display = 'none';
+        iniciarPixel();
+    });
+}
+
+if (btnRechazar) {
+    btnRechazar.addEventListener('click', () => {
+        localStorage.setItem('cookiesAceptadas', 'false');
+        cookieBanner.style.display = 'none';
+    });
+}
+
+function iniciarPixel() {
+    console.log("Píxel de Meta activado.");
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     
-    // 2. Máximo scroll posible en todo el documento
-    let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    
-    // Evitamos dividir por cero si la página fuera muy corta
-    if (maxScroll <= 0) return; 
-    
-    // 3. Calculamos el porcentaje bajado (de 0.0 a 1.0)
-    let porcentaje = scrollTop / maxScroll;
-    
-    // 4. Movemos la imagen un máximo de 20vh hacia arriba
-    // (Como la capa mide 120vh, subirla 20vh hace que el fondo quede a ras de la pantalla)
-    fondoAnimado.style.transform = `translateY(-${porcentaje * 20}vh)`;
-});
+    fbq('init', '1071552516891676');
+    fbq('track', 'PageView');
+}
