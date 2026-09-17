@@ -120,6 +120,7 @@ body {
     height: 100%;
 }
 
+/* --- FOOTER Y REDES SOCIALES --- */
 .footer {
     width: 100%;
     max-width: 500px;
@@ -128,7 +129,16 @@ body {
     margin-top: auto;
     margin-bottom: 40px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-links-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
 }
 
 .social-link {
@@ -169,4 +179,92 @@ body {
     .events-container {
         grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     }
+}
+
+/* --- BANNER DE COOKIES --- */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(17, 17, 17, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--glass-border);
+    padding: 20px;
+    z-index: 9999;
+    display: none; 
+    justify-content: center;
+}
+
+.cookie-content {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-white);
+}
+
+.cookie-content a {
+    color: var(--primary-orange);
+    text-decoration: none;
+}
+
+.cookie-content a:hover {
+    text-decoration: underline;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-cookie {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-cookie:hover {
+    transform: scale(1.05);
+}
+
+.btn-aceptar {
+    background-color: var(--primary-orange);
+    color: #111;
+}
+
+.btn-rechazar {
+    background-color: transparent;
+    border: 1px solid var(--text-white);
+    color: var(--text-white);
+}
+
+/* --- ENLACES LEGALES FOOTER --- */
+.legal-links {
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+}
+
+.legal-links a {
+    color: var(--text-white);
+    opacity: 0.5;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.legal-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
