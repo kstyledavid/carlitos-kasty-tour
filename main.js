@@ -49,7 +49,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "12",
         mes: "dic",
-        sala: "FEVER | Sala Gold",
+        sala: "Fever | Sala Gold",
         lugar: "BILBAO",
         enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-923141"
     },
