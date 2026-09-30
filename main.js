@@ -5,6 +5,14 @@
  ************************************************************************/
 
 const LISTA_CONCIERTOS = [
+        {
+        anio: "2026",
+        dia: "09",
+        mes: "oct",
+        sala: "Pandora (The Moon)",
+        lugar: "SEVILLA",
+        enlace: "https://pandorasevilla.com/agenda/klangkuenstler-x-pandora-iii-aniversario-09-10-2026/#events/klangkuenstler-x-pandora-iii-aniversario-09-10-2026-NEFH"
+    },
     {
         anio: "2026",
         dia: "10",
@@ -61,6 +69,14 @@ const LISTA_CONCIERTOS = [
         lugar: "SALA INDEPENDANCE, MADRID",
         enlace: "https://www.fourvenues.com/RAVEOUT500/C2IR"
     },
+       {
+        anio: "2027",
+        dia: "23",
+        mes: "ene",
+        sala: "Barraca",
+        lugar: "VALENCIA",
+        enlace: "https://barracamusic.com/compra-entrada/#/es/event/barraca-pres-carlitos-y-kasty-todo-el-rato/246179"
+    },
     {
         anio: "2027",
         dia: "30",
@@ -69,6 +85,14 @@ const LISTA_CONCIERTOS = [
         lugar: "GURÚ DANCE CLUB, MURCIA",
         enlace: "https://site.fourvenues.com/es/247-techno-club-null/events/carlitos-y-kasty-todo-el-rato-30-01-2027-QFSD"
     },
+     {
+        anio: "2027",
+        dia: "06",
+        mes: "feb",
+        sala: "Albéniz",
+        lugar: "GIJÓN (ENTRADAS DISPONIBLES MUY PRONTO)",
+        enlace: "https://www.obrerosdeltechno.com"
+    },
     {
         anio: "2027",
         dia: "27",
@@ -76,6 +100,14 @@ const LISTA_CONCIERTOS = [
         sala: "Peligro Club",
         lugar: "SKY ROOM / PELÍCANO, A CORUÑA",
         enlace: "https://www.fourvenues.com/peligro-club/3IQR"
+    },
+    {
+        anio: "2027",
+        dia: "20",
+        mes: "mar",
+        sala: "Oasis",
+        lugar: "ZARAGOZA | Especial Fin de Gira",
+        enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-especial-fin-de-gira-328879"
     }
 ];
 
