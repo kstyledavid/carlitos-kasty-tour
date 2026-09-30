@@ -9,7 +9,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "09",
         mes: "oct",
-        sala: "Pandora (The Moon)",
+        sala: "Pandora | The Moon",
         lugar: "SEVILLA",
         enlace: "https://pandorasevilla.com/agenda/klangkuenstler-x-pandora-iii-aniversario-09-10-2026/#events/klangkuenstler-x-pandora-iii-aniversario-09-10-2026-NEFH"
     },
@@ -17,7 +17,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "10",
         mes: "oct",
-        sala: "Sonica - sold out",
+        sala: "Sonica | sold out",
         lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
         enlace: "https://entradium.com/events/sonica-x-carlos-perez-y-k-style-todo-el-rato-tour"
     },
@@ -49,7 +49,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "12",
         mes: "dic",
-        sala: "FEVER (Sala Gold)",
+        sala: "FEVER | Sala Gold",
         lugar: "BILBAO",
         enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-923141"
     },
@@ -58,7 +58,7 @@ const LISTA_CONCIERTOS = [
         dia: "19",
         mes: "dic",
         sala: "Crepúsculo Club",
-        lugar: "ENTRADAS DISPONIBLES SÓLO EN TAQUILLA / ALFARO, LA RIOJA",
+        lugar: "ENTRADAS DISPONIBLES SÓLO EN TAQUILLA | ALFARO, LA RIOJA",
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
@@ -90,7 +90,7 @@ const LISTA_CONCIERTOS = [
         dia: "06",
         mes: "feb",
         sala: "Albéniz",
-        lugar: "GIJÓN (ENTRADAS DISPONIBLES MUY PRONTO)",
+        lugar: "ENTRADAS DISPONIBLES MUY PRONTO | GIJÓN",
         enlace: "https://www.obrerosdeltechno.com"
     },
     {
@@ -98,7 +98,7 @@ const LISTA_CONCIERTOS = [
         dia: "27",
         mes: "feb",
         sala: "Peligro Club",
-        lugar: "SKY ROOM / PELÍCANO, A CORUÑA",
+        lugar: "SKY ROOM | PELÍCANO, A CORUÑA",
         enlace: "https://www.fourvenues.com/peligro-club/3IQR"
     },
     {
@@ -106,7 +106,7 @@ const LISTA_CONCIERTOS = [
         dia: "20",
         mes: "mar",
         sala: "Oasis",
-        lugar: "ZARAGOZA | Especial Fin de Gira",
+        lugar: "ESPECIAL FIN DE GIRA | ZARAGOZA",
         enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-especial-fin-de-gira-328879"
     }
 ];
