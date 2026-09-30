@@ -17,7 +17,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "10",
         mes: "oct",
-        sala: "Sonica | sold out",
+        sala: "Sonica | Sold Out",
         lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
         enlace: "https://entradium.com/events/sonica-x-carlos-perez-y-k-style-todo-el-rato-tour"
     },
