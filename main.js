@@ -103,6 +103,14 @@ const LISTA_CONCIERTOS = [
     },
     {
         anio: "2027",
+        dia: "06",
+        mes: "mar",
+        sala: "Terminal",
+        lugar: "SABADELL",
+        enlace: "https://www.fourvenues.com/terminalsabadell/PU1G"
+    },    
+    {
+        anio: "2027",
         dia: "20",
         mes: "mar",
         sala: "Oasis",
