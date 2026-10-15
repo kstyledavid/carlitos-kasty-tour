@@ -11,7 +11,7 @@ const LISTA_CONCIERTOS = [
         mes: "oct",
         sala: "Pandora | Sold Out",
         lugar: "SEVILLA",
-        enlace: "https://pandorasevilla.com/agenda/klangkuenstler-x-pandora-iii-aniversario-09-10-2026/#events/klangkuenstler-x-pandora-iii-aniversario-09-10-2026-NEFH"
+        enlace: "https://www.obrerosdeltechno.com"
     },
     {
         anio: "2026",
@@ -19,7 +19,7 @@ const LISTA_CONCIERTOS = [
         mes: "oct",
         sala: "Sonica | Sold Out",
         lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
-        enlace: "https://entradium.com/events/sonica-x-carlos-perez-y-k-style-todo-el-rato-tour"
+        enlace: "https://www.obrerosdeltechno.com"
     },
     {
         anio: "2026",
@@ -27,7 +27,7 @@ const LISTA_CONCIERTOS = [
         mes: "oct",
         sala: "Jimmy Jazz",
         lugar: "VITORIA-GASTEIZ",
-        enlace: "https://sarrerak.jimmyjazzgasteiz.com/web/?menu=1162&pagina=entradas&item=62741&siteID=jimmyjazz"
+        enlace: "https://www.obrerosdeltechno.com"
     },
     {
         anio: "2026",
