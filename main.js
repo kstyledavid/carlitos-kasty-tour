@@ -9,7 +9,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "09",
         mes: "oct",
-        sala: "Pandora | The Moon | Sold Out",
+        sala: "Pandora | Sold Out",
         lugar: "SEVILLA",
         enlace: "https://pandorasevilla.com/agenda/klangkuenstler-x-pandora-iii-aniversario-09-10-2026/#events/klangkuenstler-x-pandora-iii-aniversario-09-10-2026-NEFH"
     },
