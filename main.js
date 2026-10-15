@@ -9,7 +9,7 @@ const LISTA_CONCIERTOS = [
         anio: "2026",
         dia: "09",
         mes: "oct",
-        sala: "Pandora | The Moon",
+        sala: "Pandora | The Moon | Sold Out",
         lugar: "SEVILLA",
         enlace: "https://pandorasevilla.com/agenda/klangkuenstler-x-pandora-iii-aniversario-09-10-2026/#events/klangkuenstler-x-pandora-iii-aniversario-09-10-2026-NEFH"
     },
@@ -90,8 +90,8 @@ const LISTA_CONCIERTOS = [
         dia: "06",
         mes: "feb",
         sala: "Albéniz",
-        lugar: "ENTRADAS DISPONIBLES MUY PRONTO | GIJÓN",
-        enlace: "https://www.obrerosdeltechno.com"
+        lugar: "GIJÓN",
+        enlace: "https://www.teatroalbenizgijon.com/evento/carlitos-y-kasti-todo-el-rato/"
     },
     {
         anio: "2027",
