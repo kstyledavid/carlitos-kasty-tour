@@ -5,38 +5,6 @@
  ************************************************************************/
 
 const LISTA_CONCIERTOS = [
-        {
-        anio: "2026",
-        dia: "09",
-        mes: "oct",
-        sala: "Pandora | Sold Out",
-        lugar: "SEVILLA",
-        enlace: "https://www.obrerosdeltechno.com"
-    },
-    {
-        anio: "2026",
-        dia: "10",
-        mes: "oct",
-        sala: "Sonica | Sold Out",
-        lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
-        enlace: "https://www.obrerosdeltechno.com"
-    },
-    {
-        anio: "2026",
-        dia: "11",
-        mes: "oct",
-        sala: "Jimmy Jazz",
-        lugar: "VITORIA-GASTEIZ",
-        enlace: "https://www.obrerosdeltechno.com"
-    },
-    {
-        anio: "2026",
-        dia: "07",
-        mes: "nov",
-        sala: "Unity",
-        lugar: "SALA ANDÉN 56, BURGOS",
-        enlace: "https://www.enterticket.es/eventos/unity-x-carlitos-y-kasty-todo-el-rato-cpxks-790888"
-    },
     {
         anio: "2026",
         dia: "28",
