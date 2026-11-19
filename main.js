@@ -7,6 +7,38 @@
 const LISTA_CONCIERTOS = [
     {
         anio: "2026",
+        dia: "09",
+        mes: "oct",
+        sala: "Pandora - sold out",
+        lugar: "SEVILLA",
+        enlace: ""
+    },
+    {
+        anio: "2026",
+        dia: "10",
+        mes: "oct",
+        sala: "Sonica - sold out",
+        lugar: "JARDÍN DE LAS ARTES, ZARAGOZA",
+        enlace: "https://entradium.com/events/sonica-x-carlos-perez-y-k-style-todo-el-rato-tour"
+    },
+    {
+        anio: "2026",
+        dia: "11",
+        mes: "oct",
+        sala: "Jimmy Jazz",
+        lugar: "VITORIA-GASTEIZ",
+        enlace: "https://sarrerak.jimmyjazzgasteiz.com/web/?menu=1162&pagina=entradas&item=62741&siteID=jimmyjazz"
+    },
+    {
+        anio: "2026",
+        dia: "07",
+        mes: "nov",
+        sala: "Unity",
+        lugar: "SALA ANDÉN 56, BURGOS",
+        enlace: "https://www.enterticket.es/eventos/unity-x-carlitos-y-kasty-todo-el-rato-cpxks-790888"
+    },
+    {
+        anio: "2026",
         dia: "28",
         mes: "nov",
         sala: "Sala Kaya",
@@ -21,7 +53,7 @@ const LISTA_CONCIERTOS = [
         lugar: "BILBAO",
         enlace: "https://www.enterticket.es/eventos/carlitos-y-kasty-todo-el-rato-cpxks-923141"
     },
-     {
+    {
         anio: "2026",
         dia: "19",
         mes: "dic",
@@ -37,7 +69,7 @@ const LISTA_CONCIERTOS = [
         lugar: "SALA INDEPENDANCE, MADRID",
         enlace: "https://www.fourvenues.com/RAVEOUT500/C2IR"
     },
-       {
+    {
         anio: "2027",
         dia: "23",
         mes: "ene",
@@ -53,7 +85,7 @@ const LISTA_CONCIERTOS = [
         lugar: "GURÚ DANCE CLUB, MURCIA",
         enlace: "https://site.fourvenues.com/es/247-techno-club-null/events/carlitos-y-kasty-todo-el-rato-30-01-2027-QFSD"
     },
-     {
+    {
         anio: "2027",
         dia: "06",
         mes: "feb",
@@ -76,7 +108,7 @@ const LISTA_CONCIERTOS = [
         sala: "Terminal",
         lugar: "SABADELL",
         enlace: "https://www.fourvenues.com/terminalsabadell/PU1G"
-    },    
+    },
     {
         anio: "2027",
         dia: "20",
@@ -96,14 +128,35 @@ const PATROCINADORES = [
  *   NO TOCAR NADA DE AQUÍ ABAJO (Lógica del sistema)
  ************************************************************************/
 
-// --- 1. RENDERIZADO DE CONCIERTOS ---
+// --- 1. RENDERIZADO DE CONCIERTOS (PRÓXIMOS Y PASADOS) ---
 const contenedor = document.getElementById('contenedor-tarjetas');
-let anoActual = ""; 
 
-LISTA_CONCIERTOS.sort((a, b) => parseInt(a.anio) - parseInt(b.anio));
+const MESES = {
+    ene: 0, feb: 1, mar: 2, abr: 3, may: 4, jun: 5,
+    jul: 6, ago: 7, sep: 8, oct: 9, nov: 10, dic: 11
+};
+
+const hoy = new Date();
+hoy.setHours(0, 0, 0, 0);
+
+const conciertosConFecha = LISTA_CONCIERTOS.map(c => {
+    const mesNum = MESES[c.mes.toLowerCase().trim()] ?? 0;
+    const fechaObj = new Date(parseInt(c.anio), mesNum, parseInt(c.dia));
+    return { ...c, fechaObj };
+});
+
+const proximos = conciertosConFecha
+    .filter(c => c.fechaObj >= hoy)
+    .sort((a, b) => a.fechaObj - b.fechaObj);
+
+const pasados = conciertosConFecha
+    .filter(c => c.fechaObj < hoy)
+    .sort((a, b) => b.fechaObj - a.fechaObj);
 
 if (contenedor) {
-    LISTA_CONCIERTOS.forEach(concierto => {
+    // 1. Próximos conciertos
+    let anoActual = "";
+    proximos.forEach(concierto => {
         if (concierto.anio !== anoActual) {
             contenedor.innerHTML += `<h2 class="separador-ano">${concierto.anio}</h2>`;
             anoActual = concierto.anio;
@@ -127,6 +180,24 @@ if (contenedor) {
         `;
         contenedor.innerHTML += tarjetaHTML;
     });
+
+    // 2. Fechas pasadas abajo
+    if (pasados.length > 0) {
+        contenedor.innerHTML += `<h2 class="separador-ano separador-pasados">FECHAS PASADAS</h2>`;
+
+        pasados.forEach(concierto => {
+            const tarjetaPasadaHTML = `
+                <div class="event-card evento-pasado">
+                    <div class="event-info">
+                        <p class="event-date">${concierto.dia} <span>//${concierto.mes} ${concierto.anio}</span></p>
+                        <h2 class="event-name">${concierto.sala}</h2>
+                        <p class="event-location">${concierto.lugar}</p>
+                    </div>
+                </div>
+            `;
+            contenedor.innerHTML += tarjetaPasadaHTML;
+        });
+    }
 }
 
 // --- 2. RENDERIZADO DE PATROCINADORES ---
