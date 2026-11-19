@@ -268,3 +268,15 @@ body {
     opacity: 1;
     text-decoration: underline;
 }
+
+/* --- FECHAS PASADAS --- */
+.separador-pasados {
+    margin-top: 50px;
+    opacity: 0.5;
+}
+
+.evento-pasado {
+    opacity: 0.45;
+    filter: grayscale(100%);
+    pointer-events: none; /* Evita clics y efecto hover */
+}
